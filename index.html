@@ -1,0 +1,54 @@
+import { Card, CardContent } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
+import { Badge } from "@/components/ui/badge";
+import { Mail, CheckCircle, Clock } from "lucide-react";
+
+export default function QAWebsite() {
+  return (
+    <main className="min-h-screen bg-gray-50 p-6">
+      <section className="max-w-3xl mx-auto text-center py-10">
+        <h1 className="text-4xl font-bold mb-4">Martin Havlíček</h1>
+        <p className="text-lg text-gray-600 mb-6">
+          Freelance QA Tester with experience in manual & exploratory testing, mobile & web apps, and API validation.
+        </p>
+        <Badge className="mb-4" variant="outline">Available for new projects</Badge>
+        <div className="flex justify-center gap-4">
+          <Button asChild>
+            <a href="mailto:martin.qa.freelance@email.com">
+              <Mail className="mr-2 h-4 w-4" /> Contact Me
+            </a>
+          </Button>
+        </div>
+      </section>
+
+      <section className="max-w-4xl mx-auto grid md:grid-cols-2 gap-6">
+        <Card>
+          <CardContent className="p-6">
+            <h2 className="text-xl font-semibold mb-2 flex items-center">
+              <CheckCircle className="w-5 h-5 text-green-500 mr-2" /> Skills & Tools
+            </h2>
+            <ul className="list-disc list-inside text-gray-700">
+              <li>Manual & Exploratory Testing</li>
+              <li>API Testing (Postman)</li>
+              <li>Regression & Smoke Testing</li>
+              <li>Mobile App Testing (iOS / Android)</li>
+              <li>Bug reporting & documentation</li>
+            </ul>
+          </CardContent>
+        </Card>
+
+        <Card>
+          <CardContent className="p-6">
+            <h2 className="text-xl font-semibold mb-2 flex items-center">
+              <Clock className="w-5 h-5 text-blue-500 mr-2" /> Availability
+            </h2>
+            <p className="text-gray-700 mb-2">
+              Currently open to freelance QA projects. Preferably remote, part-time or short-term contracts.
+            </p>
+            <p className="text-gray-600 text-sm">Timezone: Central Europe (CET/CEST)</p>
+          </CardContent>
+        </Card>
+      </section>
+    </main>
+  );
+}
